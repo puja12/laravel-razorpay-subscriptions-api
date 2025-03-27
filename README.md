@@ -6,7 +6,6 @@ This project integrates Razorpay's **Subscriptions API** into a Laravel applicat
 
 -   One-time payments using Razorpay.
 -   Subscription payments with auto-renewal.
--   Webhooks integration for payment verification.
 
 ---
 
@@ -26,8 +25,8 @@ Before setting up, ensure you have:
 ### **1️⃣ Clone the Repository**
 
 ```bash
- git clone https://github.com/your-repo-name.git
- cd your-project-folder
+ git clone https://github.com/laravel-razorpay-subscriptions-api.git
+
 ```
 
 ### **2️⃣ Install Dependencies**
@@ -44,18 +43,7 @@ Rename `.env.example` to `.env` and update Razorpay credentials:
 ```env
 RAZORPAY_KEY=your_razorpay_key
 RAZORPAY_SECRET=your_razorpay_secret
-```
-
-### **4️⃣ Run Migrations**
-
-```bash
-php artisan migrate
-```
-
-### **5️⃣ Start the Laravel Server**
-
-```bash
-php artisan serve
+RAZORPAY_SUBSCRIPTION_PLAN_ID=your_subscription_plan_id
 ```
 
 ---
@@ -76,32 +64,14 @@ php artisan serve
 
 ---
 
-## 🔔 Webhooks
-
-This project listens to Razorpay webhooks for payment success/failure.
-
--   Add your webhook URL in **Razorpay Dashboard** under `Settings > Webhooks`.
--   Example webhook endpoint: `/webhook/razorpay`.
-
-```php
-Route::post('/webhook/razorpay', [WebhookController::class, 'handle']);
-```
-
----
-
 ## 📜 API Endpoints
 
-| Method | Endpoint                 | Description                        |
-| ------ | ------------------------ | ---------------------------------- |
-| `POST` | `/payment-initiate`      | Initiates one-time payment         |
-| `POST` | `/subscription-initiate` | Creates a new subscription         |
-| `POST` | `/payment-complete`      | Verifies payment signature         |
-| `POST` | `/webhook/razorpay`      | Handles Razorpay webhook responses |
+| Method | Endpoint                 | Description                |
+| ------ | ------------------------ | -------------------------- |
+| `POST` | `/payment-initiate`      | Initiates one-time payment |
+| `POST` | `/subscription-initiate` | Creates a new subscription |
+| `POST` | `/payment-complete`      | Verifies payment signature |
 
 ---
-
-## 📌 License
-
-This project is open-source and available under the **MIT License**.
 
 🚀 **Happy Coding!**
