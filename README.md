@@ -44,6 +44,7 @@ Rename `.env.example` to `.env` and update Razorpay credentials:
 ```env
 RAZORPAY_KEY=your_razorpay_key
 RAZORPAY_SECRET=your_razorpay_secret
+RAZORPAY_SUBSCRIPTION_PLAN_ID=your_subscription_plan_id
 ```
 
 ### **4️⃣ Run Migrations**
