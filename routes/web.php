@@ -16,7 +16,8 @@ use App\Http\Controllers\PaymentController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('payment-initiate');
 });
 
 Route::get('/create-subscription-plan', [RazorPayController::class,'create_subscription_plan']);
@@ -31,3 +32,9 @@ Route::post('payment-initiate-request', [PaymentController::class, 'Initiate'])-
 
 // for Payment complete
 Route::post('payment-complete',[PaymentController::class,'Complete']);
+
+
+Route::get('/success', function () {
+    //return view('welcome');
+    return view('payment-success-page');
+});
