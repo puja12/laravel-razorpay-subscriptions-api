@@ -33,6 +33,7 @@ class PaymentController extends Controller
             $response = [
                 'subscriptionId' => $subscription['id'],
                 'razorpayId' => env('RAZORPAY_KEY'),
+                'currency' => 'INR',
                 'name' => $request->name,
                 'email' => $request->email,
                 'contactNumber' => $request->contactNumber,

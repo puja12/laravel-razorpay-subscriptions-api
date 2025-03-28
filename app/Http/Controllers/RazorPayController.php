@@ -24,9 +24,9 @@ class RazorPayController extends Controller
             'period' => 'weekly',
             'interval' => 1,
             'item' => [
-                'name' => 'Test Weekly 1 plan',
+                'name' => 'Test Weekly plan 2',
                 'description' => 'Description for the weekly 1 plan',
-                'amount' => 600, // Make sure this is in paise (600 paise = ₹6)
+                'amount' => 5000, // Make sure this is in paise (600 paise = ₹6)
                 'currency' => 'INR',
             ],
             'notes' => [
